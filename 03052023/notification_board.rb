@@ -27,7 +27,7 @@ class NotificationBoard
         return_to_main_menu = false
         until return_to_main_menu
             display_messages_types_prompt
-            type = gets.chomp.to_i
+            type = @ui.get_numeric_input
             if type == 4
                 return_to_main_menu = true 
                 break
